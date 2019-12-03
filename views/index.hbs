@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>App</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      function htmlDecode(input){
+        var e = document.createElement('textarea');
+        e.innerHTML = input;
+        // handle case of empty input
+        return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
+      }
+      var json = '{{ json }}';
+      var AppInitialState = JSON.parse(htmlDecode(json));
+    </script>
+    <script type="module" src="/js/index.js"></script>
+  </body>
+</html>
