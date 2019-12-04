@@ -8,6 +8,7 @@ const App = () => {
 
   return html`
     <div>
+      <div>session id: ${AppInitialState.sessionId}</div>
       <div>message from server: ${message}</div>
       <div>
         <button onClick=${() => setCount(count - 1)}>-1</button>

@@ -1,4 +1,4 @@
-import { Controller, Get, Render } from '@nestjs/common';
+import { Controller, Get, Render, Session } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
@@ -7,8 +7,8 @@ export class AppController {
 
   @Get()
   @Render('index')
-  root() {
+  root(@Session() session: Express.Session) {
     const message = this.appService.getHello();
-    return { json: JSON.stringify({ message }) };
+    return { json: JSON.stringify({ message, sessionId: session.id }) };
   }
 }
