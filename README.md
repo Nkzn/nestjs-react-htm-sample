@@ -5,6 +5,8 @@ sample: https://nestjs-react-htm-sample.herokuapp.com/
 
 ## This sample did
 
+Non-build React uses data from server-side `AppService`.
+
 * Use `Handlebars` template engine. (follow [this doc](https://docs.nestjs.com/techniques/mvc))
   - `src/main.ts`
   - `views/index.hbs`
